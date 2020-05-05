@@ -153,8 +153,11 @@ class Sudoku:
         sudoku_board = copy.deepcopy(self.new_sudoku)
 
         while remove_cell > 0:
-            row = random.randint(0,8)
-            col = random.randint(0,8)
+            while True:
+                row = random.randint(0,8)
+                col = random.randint(0,8)
+                if sudoku_board[row][col] != 0:
+                    break
 
             back_up_val = sudoku_board[row][col]
             sudoku_board[row][col] = 0
@@ -163,7 +166,7 @@ class Sudoku:
             if self.counter > 1:
                 sudoku_board[row][col] = back_up_val
             else:
-                remove_cell -=1
+                remove_cell -= 1
             self.counter = 0
             # break
         self.__print_board__(sudoku_board)
