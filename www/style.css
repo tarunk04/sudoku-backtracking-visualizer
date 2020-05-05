@@ -43,12 +43,20 @@
     height: 54px;
     border-bottom: 1px solid rgba(150, 150, 150, 1);
     border-right: 1px solid rgba(150, 150, 150, 1);
+    transition: 0.2s;
 }
 
 .cell:hover {
     background: rgba(255, 68, 0, 0.21);
 }
-
+.solved{
+    background: rgba(191, 243, 69, 0.82);
+    color : rgba(0, 18, 255, 0.70);
+}
+.error{
+    background: rgb(255, 98, 98);
+    color : rgba(0, 18, 255, 0.70);
+}
 .sudoku_placeholder {
     display: flex;
     position: absolute;
