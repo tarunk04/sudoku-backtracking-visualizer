@@ -25,7 +25,7 @@ Game offer 4 difficulty levels:
  ![GUI](screenshots/Sudoku%20-%20Backtracking%20Algorithm%20visualizer.png)
  
  # Backtracking in Action
- ![visualizer](screenshots/visualizer.mp4)
+ ![visualizer](screenshots/visualizer.gif)
  
  # Author
  Tarun Kumar
