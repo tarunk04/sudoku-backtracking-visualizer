@@ -40,11 +40,13 @@ class Sudoku:
             i += 1
             # end condition
             if i > 8:
+                if visualize == False:
+                    eel.draw_sudoku(self.sudoku_solved)
                 return True
 
         # skipping cell if the cell has already a number
         if self.sudoku_solved[i][j] != 0:
-            if self.__solve_backtrack__(i, (j + 1),visualize):
+            if self.__solve_backtrack__(i, (j + 1), visualize):
                 return True
         # solving for the cell if the cell is empty
         else:
@@ -59,7 +61,7 @@ class Sudoku:
                         time.sleep(0.2)
                         eel.update_sudoku(val, 9 * i + j)
                         time.sleep(0.2)
-                    if self.__solve_backtrack__(i, (j + 1),visualize):
+                    if self.__solve_backtrack__(i, (j + 1), visualize):
                         return True
                     # it the current validated number fails reset the cell
                     self.sudoku_solved[i][j] = 0
@@ -95,11 +97,13 @@ class Sudoku:
                     self.__count_solutions__(i, (j + 1))
                     # it the current validated number fails reset the cell
                     self.sudoku_solved[i][j] = 0
+                    if self.counter > 1:
+                        return
 
     def solve(self, sudoku, visualize=False):
         self.sudoku_matrix = copy.deepcopy(sudoku)
         self.sudoku_solved = copy.deepcopy(sudoku)
-        self.__solve_backtrack__(0, 0, visualize=True)
+        self.__solve_backtrack__(0, 0, visualize=visualize)
         return self.sudoku_solved
 
     def solution_count(self, sudoku):
@@ -150,19 +154,20 @@ class Sudoku:
         # generate solved sudoku
         self.generate_solved_sudoku()
         if level == 1:
-            remove_cell = random.randint(18, 30)
+            remove_cell = random.randint(32, 38)
         if level == 2:
-            remove_cell = random.randint(33, 44)
+            remove_cell = random.randint(40, 46)
         if level == 3:
-            remove_cell = random.randint(46, 52)
+            remove_cell = random.randint(48, 52)
         if level == 4:
-            remove_cell = random.randint(54, 57)
+            remove_cell = random.randint(54, 56)
         if level == 5:
             remove_cell = random.randint(59, 61)
 
         sudoku_board = copy.deepcopy(self.new_sudoku)
-
+        print(remove_cell)
         while remove_cell > 0:
+            # print(remove_cell)
             while True:
                 row = random.randint(0, 8)
                 col = random.randint(0, 8)
@@ -179,7 +184,7 @@ class Sudoku:
                 remove_cell -= 1
             self.counter = 0
             # break
-        # self.__print_board__(sudoku_board)
+        self.__print_board__(sudoku_board)
         return sudoku_board
 
     def __print_board__(self, board):

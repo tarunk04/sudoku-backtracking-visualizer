@@ -49,14 +49,21 @@
 .cell:hover {
     background: rgba(255, 68, 0, 0.21);
 }
-.solved{
+
+.solved {
     background: rgba(191, 243, 69, 0.82);
-    color : rgba(0, 18, 255, 0.70);
+    color: rgba(0, 18, 255, 0.70);
 }
-.error{
+
+.error {
     background: rgb(255, 98, 98);
-    color : rgba(0, 18, 255, 0.70);
+    color: rgba(0, 18, 255, 0.70);
 }
+
+.empty {
+    color: rgba(0, 18, 255, 0.70);
+}
+
 .sudoku_placeholder {
     display: flex;
     position: absolute;
@@ -77,11 +84,6 @@
     align-items: center;
 }
 
-.timer {
-    width: 30%;
-    height: 100%
-}
-
 .btn {
     cursor: pointer;
     margin-right: 20px;
@@ -98,7 +100,76 @@
     transition: 0.2s;
 }
 
-.new_btn:hover {
+.btn:hover {
     background: #ffffff;
     color: #ff6b00;
+}
+
+.action_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(106, 59, 15, 0.73);
+    transition: 0.5s;
+}
+
+.btn_margin {
+    margin: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+    background: #ff6b00;
+    line-height: 25px;
+    width: 25px;
+    text-align: center;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.close:hover {
+    background: #ffffff;
+    color: #ff6b00;
+}
+
+.game_info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.timer {
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    font-family: cursive;
+    line-height: 30px;
+    text-align: right;
+    padding: 0 10px;
+    color: #612e0a;
+}
+
+.level {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: cursive;
+    padding: 0 10px;
+    color: #612e0a;
+    text-align: right;
 }

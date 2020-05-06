@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sudoku - Backtracking Algorithm visualizer</title>
+    <title>Sudoku - Backtracking Algorithm Visualizer</title>
     <script src="/jquery.js"></script>
     <script src="/eel.js"></script>
     <script src="/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div class="action_message" style="display: none">
+</div>
 <div class="container">
+    <!-- header containing buttons and game infos -->
     <div class="header">
         <div class="buttoms">
             <div class="btn" id="new_btn">New Puzzle</div>
             <div class="btn" id="solve_btn">Solve</div>
         </div>
-        <div class="timer"></div>
+        <div class="game_info">
+            <div class="level"></div>
+            <div class="timer"></div>
+        </div>
     </div>
     <div class="body">
+        <!-- Sudoku Borad -->
         <div class="sudoku_board">
+            <!-- 9 3x3 grids -->
             <div class="grid" id="grid0"></div>
             <div class="grid" id="grid1"></div>
             <div class="grid" id="grid2"></div>
