@@ -42,6 +42,8 @@ $(function () {
             eel.generate_new_sudoku($(this).attr("data-level"));
             $(".level").html(level[$(this).attr("data-level") - 1]);
             $(".cell").removeClass("empty")
+            $(".cell").removeClass("solved");
+            $(".cell").removeClass("error");
         });
 
     });
@@ -67,16 +69,13 @@ $(function () {
             if ($(this).attr("data-mode") == 1)
                 $(".action_message").toggle(20);
         });
-
     });
-
 });
 
 
 // JavaScript functions exposed to python
 eel.expose(draw_sudoku)
 eel.expose(update_sudoku)
-
 // Function for drawing sudoku
 function draw_sudoku(data) {
     for (i = 0; i < 81; i++) {
