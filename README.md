@@ -8,7 +8,8 @@ Game offer 4 difficulty levels:
 <br>
 
 **Note: Game is not playable yet although visualization can done on any level of game.** 
-
+# Blog (Tutorial)
+I have explained the project in my **blog post** check it out here: [Sudoku- Backtracking algorithm and visualization (Medium)](https://bit.ly/sudoku-algo-visualizer)
 # Requirements
 * `eel` python library. Use `pip install eel` to install.
 * basic knowledge of HTML,CSS,JavaScript
