@@ -32,6 +32,6 @@ Game offer 4 difficulty levels:
  
 **Author's Note**
  
-The author is not responsible for any misuse the program. Any commercial use of the code is not permissible however any contribution or suggestions are most welcome. Read the LICENSE carefully.
+The author is not responsible for any misuse the program. Any contribution or suggestions are most welcome. Read the LICENSE carefully.
  # License
  The MIT License, see the included, see the [License](https://github.com/tarunk04/sudoku-backtracking-visualizer/blob/master/LICENSE) file.
