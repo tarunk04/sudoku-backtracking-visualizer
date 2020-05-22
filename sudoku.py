@@ -95,7 +95,7 @@ class Sudoku:
                     self.sudoku_solved[i][j] = val
                     # moving to next cell
                     self.__count_solutions__(i, (j + 1))
-                    # it the current validated number fails reset the cell
+                    # if the current validated number fails reset the cell
                     self.sudoku_solved[i][j] = 0
                     if self.counter > 1:
                         return
@@ -165,14 +165,25 @@ class Sudoku:
             remove_cell = random.randint(59, 61)
 
         sudoku_board = copy.deepcopy(self.new_sudoku)
-        print(remove_cell)
+        # print(remove_cell)
+
+        #all possible cells index
+        index = []
+        for i in range(81):
+            index.append(i)
+
         while remove_cell > 0:
-            # print(remove_cell)
-            while True:
-                row = random.randint(0, 8)
-                col = random.randint(0, 8)
-                if sudoku_board[row][col] != 0:
-                    break
+            cell_id = random.sample(index,1)[0]
+            row = cell_id//9
+            col = cell_id%9
+
+            index.remove(cell_id)
+            print(remove_cell)
+            # while True:
+            #     row = random.randint(0, 8)
+            #     col = random.randint(0, 8)
+            #     if sudoku_board[row][col] != 0:
+            #         break
 
             back_up_val = sudoku_board[row][col]
             sudoku_board[row][col] = 0

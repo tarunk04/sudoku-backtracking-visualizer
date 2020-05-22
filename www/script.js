@@ -7,6 +7,12 @@ function get_id(i) {
     return grid_i * 3 + grid_j
 }
 
+function  sanitize(t) {
+    const val = $(t).val()
+    if ( val == "1" || val =="2" || val == "1" || val =="2"){
+
+    }
+}
 function format_sudoku_data() {
     return data
 }
@@ -70,12 +76,14 @@ $(function () {
                 $(".action_message").toggle(20);
         });
     });
+
 });
 
 
 // JavaScript functions exposed to python
 eel.expose(draw_sudoku)
 eel.expose(update_sudoku)
+
 // Function for drawing sudoku
 function draw_sudoku(data) {
     for (i = 0; i < 81; i++) {
@@ -85,11 +93,17 @@ function draw_sudoku(data) {
 
         // filling sudoku board with values
         if (data[row][col] != 0) { // cell in not empty
-            if ($("#" + i).html() != "") $("#" + i).removeClass("empty");
+            if ($("#" + i).attr("empty") == "0") $("#" + i).removeClass("empty");
             $("#" + i).text(data[row][col]);
+            $("#" + i).attr("empty", "0");
         } else { // cell is empty
+            $("#" + i).attr("empty", "1");
             $("#" + i).addClass("empty");
-            $("#" + i).text("");
+            input = '<input class="input" id="' + i + '" oninput="sanitize(this)"></input>'
+            $("#" + i).html(input)
+            // $(".input").on("change", function () {
+            //     console.log("wor")
+            // })
         }
     }
     // toggle level selector pane

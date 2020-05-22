@@ -173,3 +173,23 @@
     color: #612e0a;
     text-align: right;
 }
+.input{
+    outline: none;
+    border: none;
+    background: transparent;
+    line-height: 54px;
+    text-align: center;
+    font-size: 26px;
+    color: inherit;
+    width: 54px;
+    height: 54px;
+    border-bottom: 1px solid rgba(150, 150, 150, 1);
+    border-right: 1px solid rgba(150, 150, 150, 1);
+    transition: 0.1s;
+}
+.input:focus{
+    background: rgba(156, 190, 243, 0.23);
+    width: 50px;
+    height: 50px;
+    border: 2px solid #091ef163;
+}
