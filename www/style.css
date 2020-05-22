@@ -185,11 +185,12 @@
     height: 54px;
     border-bottom: 1px solid rgba(150, 150, 150, 1);
     border-right: 1px solid rgba(150, 150, 150, 1);
-    transition: 0.1s;
+    transition: 0.05s;
 }
 .input:focus{
     background: rgba(156, 190, 243, 0.23);
     width: 50px;
     height: 50px;
     border: 2px solid #091ef163;
+    caret-color: transparent;
 }

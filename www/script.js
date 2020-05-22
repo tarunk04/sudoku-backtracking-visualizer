@@ -7,12 +7,19 @@ function get_id(i) {
     return grid_i * 3 + grid_j
 }
 
-function  sanitize(t) {
-    const val = $(t).val()
-    if ( val == "1" || val =="2" || val == "1" || val =="2"){
-
+function sanitize(element) {
+    var e = $(element)
+    var text = e.val()[e.val().length - 1]
+    var val = text.charCodeAt(0)
+    console.log(val)
+    if (val < 60 && val > 48) {
+        e.val(text)
+    } else {
+        if (e.val().length == 1) e.val("")
+        else e.val(e.val()[0])
     }
 }
+
 function format_sudoku_data() {
     return data
 }
