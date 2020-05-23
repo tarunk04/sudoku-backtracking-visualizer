@@ -6,6 +6,7 @@ Game offer 4 difficulty levels:
 * Hard
 * Expert
 <br>
+
 # Beta Version
 Beta version of Playable game (standalone executable for windows) is available in AppBuild-beta branch of this repository. Check the branch [here](https://github.com/tarunk04/sudoku-backtracking-visualizer/tree/AppBuild-beta).
  Or download the standalone executable for windows [here](https://github.com/tarunk04/sudoku-backtracking-visualizer/raw/AppBuild-beta/Sudoku%20App.exe)
