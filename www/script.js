@@ -244,9 +244,9 @@ function update_sudoku(val, i) {
 // validating cell for sudoku rules while solving manually
 function validate(i, bool) {
     if (bool) {
-        $("#" + i).removeClass("error");
+        $("[data-id="+i+"]").removeClass("error");
     } else {
-        $("#" + i).addClass("error");
+        $("[data-id="+i+"]").addClass("error");
     }
 
 }
