@@ -25,8 +25,8 @@ function handle_key(event) {
         col = col < 0 ? 0: col
         curren_active_cell = (row) * 9 + (col)
         $("#" + curren_active_cell).click()
-        $("#" + curren_active_cell).focus()
-        $("[data-id=" + curren_active_cell + "]").focus()
+        // $("#" + curren_active_cell).focus()
+        // cell_rules(document.getElementById(curren_active_cell))
         console.log(row +" "+ col)
     }
 }
@@ -84,14 +84,16 @@ function sanitize(element) {
 
 // validating cell for valid entry
 function cell_rules(element) {
+    console.log("test")
     var e = $(element)
     curren_active_cell = parseInt(e.attr("id"))
     $(".cell").removeClass("active")
     $(".cell").removeClass("cell_rules")
     $(".grid").removeClass("cell_rules")
-    var temp = e.val()
-    e.val("")
-    e.val(temp)
+    $("[data-id=" + curren_active_cell + "]").focus()
+    var temp = $("[data-id=" + curren_active_cell + "]").val()
+    $("[data-id=" + curren_active_cell + "]").val("")
+    $("[data-id=" + curren_active_cell + "]").val(temp)
 
     var row = ~~(parseInt(e.attr("id")) / 9)
     var col = ~~(parseInt(e.attr("id")) % 9)
