@@ -1,13 +1,14 @@
 # Sudoku Backtracking Visualizer [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/tarunk04/sudoku-backtracking-visualizer/blob/master/LICENSE)
-A sudoku game with built-in feature to visualize the solving of sudoku using backtracking algorithm. 
+A sudoku game with built-in feature to visualize the solving of sudoku using backtracking algorithm.
 Game offer 4 difficulty levels: 
 * Easy
 * Medium
 * Hard
 * Expert
 <br>
-
-**Note: Game is not playable yet although visualization can done on any level of game.** 
+# Beta Version
+Beta version of Playable game (standalone executable for windows) is available in AppBuild-beta branch of this repository. Check the branch [here](https://github.com/tarunk04/sudoku-backtracking-visualizer/tree/AppBuild-beta).
+ Or download the standalone executable for windows [here](https://github.com/tarunk04/sudoku-backtracking-visualizer/raw/AppBuild-beta/Sudoku%20App.exe)
 # Blog (Tutorial)
 I have explained the project in my **blog post** check it out here: [Sudoku- Backtracking algorithm and visualization (Medium)](https://bit.ly/sudoku-algo-visualizer)
 # Requirements
