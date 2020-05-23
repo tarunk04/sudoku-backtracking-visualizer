@@ -34,6 +34,7 @@ def validate_sudoku(index,val):
     row = int(index)//9
     col = int(index)%9
     value = 0
+    updated_sudoku[row][col] = value
     if val != "":
         value = int(val)
         eel.validate(index,Sudoku().validate_cell(updated_sudoku,value,row,col))
