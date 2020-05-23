@@ -33,7 +33,7 @@ class Sudoku:
 
         return True
 
-    def __solve_backtrack__(self, i, j, visualize=False):
+    def __solve_backtrack__(self, i, j, visualize=False, draw=True):
         # Changing row if col index reaches end of the row
         if j > 8:
             j = 0
@@ -41,12 +41,13 @@ class Sudoku:
             # end condition
             if i > 8:
                 if visualize == False:
-                    eel.draw_sudoku(self.sudoku_solved)
+                    if draw:
+                        eel.draw_sudoku(self.sudoku_solved)
                 return True
 
         # skipping cell if the cell has already a number
         if self.sudoku_solved[i][j] != 0:
-            if self.__solve_backtrack__(i, (j + 1), visualize):
+            if self.__solve_backtrack__(i, (j + 1), visualize, draw):
                 return True
         # solving for the cell if the cell is empty
         else:
@@ -61,7 +62,7 @@ class Sudoku:
                         time.sleep(0.2)
                         eel.update_sudoku(val, 9 * i + j)
                         time.sleep(0.2)
-                    if self.__solve_backtrack__(i, (j + 1), visualize):
+                    if self.__solve_backtrack__(i, (j + 1), visualize, draw):
                         return True
                     # it the current validated number fails reset the cell
                     self.sudoku_solved[i][j] = 0
@@ -100,10 +101,10 @@ class Sudoku:
                     if self.counter > 1:
                         return
 
-    def solve(self, sudoku, visualize=False):
+    def solve(self, sudoku, visualize=False, draw=True):
         self.sudoku_matrix = copy.deepcopy(sudoku)
         self.sudoku_solved = copy.deepcopy(sudoku)
-        self.__solve_backtrack__(0, 0, visualize=visualize)
+        self.__solve_backtrack__(0, 0, visualize=visualize, draw=draw)
         return self.sudoku_solved
 
     def solution_count(self, sudoku):
@@ -167,15 +168,15 @@ class Sudoku:
         sudoku_board = copy.deepcopy(self.new_sudoku)
         # print(remove_cell)
 
-        #all possible cells index
+        # all possible cells index
         index = []
         for i in range(81):
             index.append(i)
 
         while remove_cell > 0:
-            cell_id = random.sample(index,1)[0]
-            row = cell_id//9
-            col = cell_id%9
+            cell_id = random.sample(index, 1)[0]
+            row = cell_id // 9
+            col = cell_id % 9
 
             index.remove(cell_id)
             print(remove_cell)

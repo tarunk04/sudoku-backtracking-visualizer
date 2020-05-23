@@ -43,7 +43,7 @@
     height: 54px;
     border-bottom: 1px solid rgba(150, 150, 150, 1);
     border-right: 1px solid rgba(150, 150, 150, 1);
-    transition: 0.2s;
+    transition: 0.05s;
 }
 
 .cell:hover {
@@ -56,12 +56,18 @@
 }
 
 .error {
-    background: rgb(255, 98, 98);
-    color: rgba(0, 18, 255, 0.70);
+    background: rgba(255, 0, 0, 0.44) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .empty {
     color: rgba(0, 18, 255, 0.70);
+}
+.active{
+    background: rgba(0, 94, 241, 0.23) !important;
+}
+.cell_rules {
+    background: rgb(216, 230, 247);
 }
 
 .sudoku_placeholder {
@@ -173,7 +179,8 @@
     color: #612e0a;
     text-align: right;
 }
-.input{
+
+.input {
     outline: none;
     border: none;
     background: transparent;
@@ -185,12 +192,27 @@
     height: 54px;
     border-bottom: 1px solid rgba(150, 150, 150, 1);
     border-right: 1px solid rgba(150, 150, 150, 1);
-    transition: 0.05s;
+    transition: 0.01s;
 }
-.input:focus{
-    background: rgba(156, 190, 243, 0.23);
+
+.input:focus {
+    background: rgba(0, 94, 241, 0.23);
     width: 50px;
     height: 50px;
     border: 2px solid #091ef163;
     caret-color: transparent;
+}
+
+.message {
+    margin-right: 20px;
+    background: #ff6b00;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    border: 2px solid rgb(241, 105, 6);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
 }
