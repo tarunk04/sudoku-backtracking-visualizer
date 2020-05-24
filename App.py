@@ -50,4 +50,4 @@ if __name__ == "__main__":
     eel.init("www")
 
     # starting eel server
-    eel.start('index.html', size=(540, 660))
+    eel.start('index.html', size=(540, 695))

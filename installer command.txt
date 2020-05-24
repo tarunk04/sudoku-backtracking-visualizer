@@ -1,2 +1,1 @@
-python -m eel App.py www  --exclude win32com --exclude numpy --exclude cryptography --exclude FixTk --exclude tcl --exclude tk --exclude _tkinter --exclude tkinter --exclude Tkinter --onefile --noc
-onsole -n "Sudoku App"
+python -m eel App.py www  --exclude win32com --exclude numpy --exclude cryptography --exclude FixTk --exclude tcl --exclude tk --exclude _tkinter --exclude tkinter --exclude Tkinter --onefile --noconsole -n "Sudoku App"
