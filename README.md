@@ -30,6 +30,9 @@ I have explained the project in my **blog post** check it out here: [Sudoku- Bac
  # Backtracking in Action
  ![visualizer](screenshots/visualizer.gif)
  
+ --------------------
+[![BuyMeCoffe](https://cdn-images-1.medium.com/max/800/1*Dpw8-hNGI2fDmosV4E8DVQ.png)](https://www.buymeacoffee.com/tarunkumar)
+ 
  # Author
  Tarun Kumar
  
